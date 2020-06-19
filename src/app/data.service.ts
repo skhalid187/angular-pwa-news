@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  newsApiKey = "News api key goes here";
+  newsApiKey = 'News api key goes here';
 
   newsApiUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
 

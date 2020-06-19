@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { DataService } from './data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-pwa-news';
 
   newsArticles: any;
@@ -18,6 +18,6 @@ export class AppComponent {
       (res: any) => {
           this.newsArticles = res.articles;
       }
-    )
+    );
   }
 }
