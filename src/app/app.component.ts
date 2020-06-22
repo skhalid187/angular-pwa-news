@@ -7,16 +7,16 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-pwa-news';
+  public title = 'angular-pwa-news';
 
-  newsArticles: any;
+  public newsArticles: any;
 
-  constructor(private dataService: DataService){}
+  constructor(private dataService: DataService) {}
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.dataService.getNews().subscribe(
       (res: any) => {
-          this.newsArticles = res.articles;
+        this.newsArticles = res.articles;
       }
     );
   }

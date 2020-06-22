@@ -5,8 +5,7 @@ module.exports = {
       '@typescript-eslint',
     ],
     extends: [
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
+        'favoritemedium-typescript'
     ],
     "parserOptions": {
         "ecmaVersion": 2017

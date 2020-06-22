@@ -5,14 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
+  private newsApiKey = 'News api key goes here';
 
-  newsApiKey = 'News api key goes here';
-
-  newsApiUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
+  private newsApiUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
 
   constructor(private httpClient: HttpClient) { }
 
-  getNews() {
+  public getNews(): any {
     const finalnewsApilUrl = this.newsApiUrl + this.newsApiKey;
     return this.httpClient.get(finalnewsApilUrl);
   }
