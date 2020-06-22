@@ -7,7 +7,7 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public title = 'angular-pwa-news';
+  public title = 'Latest News';
 
   public newsArticles: any;
 
