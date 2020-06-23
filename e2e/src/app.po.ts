@@ -8,4 +8,10 @@ export class AppPage {
   getTitleText(): Promise<string> {
     return element(by.css('app-root .main-container h1')).getText() as Promise<string>;
   }
+
+  getArticleList(): Promise<string[]> {
+    return element.all(by.css('app-root .main-container .article-text')).map(elem => {
+      return elem.getText();
+    }) as Promise<string[]>;
+  };
 }

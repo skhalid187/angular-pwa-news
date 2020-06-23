@@ -13,6 +13,13 @@ describe('workspace-project App', () => {
     expect(page.getTitleText()).toEqual('Latest News');
   });
 
+  it('should display atleast an article.', ()=>{
+    page.navigateTo();
+    expect(page.getArticleList().then((list: string[]) => {
+      return list.length;
+      })).toBeGreaterThan(0);
+  })
+
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
