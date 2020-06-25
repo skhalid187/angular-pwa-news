@@ -20,6 +20,6 @@ export class DataService {
       return this.httpClient.get(finalnewsApilUrl);
     }
 
-    return of({articles});
+    return of(articles);
   }
 }
